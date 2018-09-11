@@ -1,0 +1,32 @@
+{
+  "name": "koajs-default-route",
+  "version": "1.0.0",
+  "description": "This project shows how to create a Koa.js default route to act as a catch-all for all unhandled routes.",
+  "main": "index.js",
+  "scripts": {
+    "babel-node": "babel-node"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+ssh://git@github.com/seetd-knowledge/koajs-default-route.git"
+  },
+  "keywords": [
+    "koajs"
+  ],
+  "author": "Darren Seet <darren_seet@oredi.com> (http://www.oredi.com)",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/seetd-knowledge/koajs-default-route/issues"
+  },
+  "homepage": "https://github.com/seetd-knowledge/koajs-default-route#readme",
+  "dependencies": {
+    "koa": "^2.5.2",
+    "koa-router": "^7.4.0",
+    "koa-static": "^5.0.0"
+  },
+  "devDependencies": {
+    "@babel/core": "^7.0.0",
+    "@babel/node": "^7.0.0",
+    "@babel/preset-env": "^7.0.0"
+  }
+}
