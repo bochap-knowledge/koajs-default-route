@@ -33,3 +33,5 @@ app
   .use(koaStatic(path.join(__dirname, 'public')));
 
 app.listen(PORT);
+
+console.log(`listening on port ${PORT}`);
