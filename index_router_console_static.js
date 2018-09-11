@@ -7,17 +7,18 @@ const PORT = process.env.PORT || 3000;
 const app = new Koa();
 const router = new KoaRouter();
 
-app.use(async (ctx, next) => {
-  console.log('before console.log middleware');
-  console.log(`Logging: ${ctx.method} ${ctx.url}`);
-  await next();
-  console.log('after console.log middleware');
-});
-
-// Note that this comes after the console.log middleware as it determines the sequence the middleware is ran
+// Note that the router becomes the first middleware
+// here even though route.get comes after the console.log middleware
 app
   .use(router.routes())
   .use(router.allowedMethods());
+
+app.use(async (ctx, next) => {
+  console.log('before console.log middleware');
+  console.log(`${ctx.method} ${ctx.url}`);
+  await next();
+  console.log('after console.log middleware');
+});
 
 router.get('*', async (ctx, next) => {
   console.log('before router middleware');
